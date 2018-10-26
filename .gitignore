@@ -1,0 +1,42 @@
+##############################
+## Folders                  ##
+##############################
+target
+packages
+bin
+obj
+Debug
+Release
+x86
+x64
+.svn
+.vs
+ACSParking_CentreChargeSetupSetup
+ParkingVideoWindowsServiceSetup
+ParkingVideoSetup
+DevExpress10.2.3
+
+##############################
+## Netbeans conf            ##
+##############################
+nb-configuration.xml
+nbactions.xml
+
+
+##############################
+## Netbeans file            ##
+##############################
+*.a
+*.o
+*.lo
+*.la
+*.al
+*.so
+*.so.[0-9]*
+*.pyc
+*.pyo
+*.rej
+*.suo
+*.user
+*.class
+[Tt]humbs.db

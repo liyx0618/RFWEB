@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  rf_web:
+    image: ${DOCKER_REGISTRY}rfweb
+    build:
+      context: .\RF_WEB
+      dockerfile: Dockerfile
