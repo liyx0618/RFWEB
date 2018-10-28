@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Windows</DockerTargetOS>
-    <ProjectGuid>82624961-c09c-4a37-bb2e-5d49b6555327</ProjectGuid>
+    <ProjectGuid>5941366c-b499-4482-b833-10d200d55f23</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>http://{ServiceIPAddress}</DockerServiceUrl>
     <DockerServiceName>rf_web</DockerServiceName>
