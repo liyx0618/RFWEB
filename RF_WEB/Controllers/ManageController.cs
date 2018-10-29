@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace RF_WEB.Controllers
 {
-    public class LoginController : Controller
+    public class ManageController : Controller
     {
-        // GET: Login
+        // GET: Manage
         public ActionResult Index()
         {
-            return View("~/Views/Login/Index.cshtml");
+            return View();
         }
     }
 }
