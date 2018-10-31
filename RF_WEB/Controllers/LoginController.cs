@@ -13,5 +13,10 @@ namespace RF_WEB.Controllers
         {
             return View("~/Views/Login/Index.cshtml");
         }
+
+        public ActionResult login()
+        {
+            return View("~/Views/Manage/Index.cshtml");
+        }
     }
 }

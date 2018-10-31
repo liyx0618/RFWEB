@@ -13,5 +13,10 @@ namespace RF_WEB.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public JsonResult Menu()
+        {
+            return Json("{\"code\":\"121313\"}", JsonRequestBehavior.AllowGet);
+        }
     }
 }
