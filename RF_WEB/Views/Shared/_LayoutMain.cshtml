@@ -27,7 +27,8 @@
 </head>
 <body>
     @RenderPage("_header.cshtml")
-    @RenderPage("_menu.cshtml")
+    @*@RenderPage("_menu.cshtml")*@
+    @Html.Action("GetMenu", "PageMenu", null)
     <section class="Hui-article-box">
         <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
             <div class="Hui-tabNav-wp">

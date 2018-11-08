@@ -7,7 +7,7 @@ namespace RF_WEB.Models
 {
     public class PageMenu
     {
-        public string url { set; get; }
-        public string name { set; get; }
+        public string Url { set; get; }
+        public string Name { set; get; }
     }
 }

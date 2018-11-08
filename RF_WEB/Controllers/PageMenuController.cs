@@ -17,8 +17,11 @@ namespace RF_WEB.Controllers
         [HttpPost]
         public ActionResult GetMenu()
         {
-
-            return PartialView("");
+            var model = new List<Models.PageMenu>() {
+                new Models.PageMenu(){ Name = "baidu", Url="/Manage/Index" },
+                new Models.PageMenu(){ Name = "baidu2", Url="www.baidu.com" }
+            };
+            return PartialView("/Views/Shared/_menu.cshtml", model);
         }
     }
 }
