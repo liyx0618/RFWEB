@@ -11,39 +11,42 @@ namespace RF_WEB.Controllers
         // GET: Manage
         public ActionResult Index()
         {
-            return View("~/Views/Manage/ReliefRecord.cshtml");
+            return View();
         }
         [HttpPost]
         public JsonResult Menu()
         {
             return Json("{\"codes\":\"121313\"}");
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ReliefView()
+        {
+            return View("~/Views/Manage/ReliefRecord.cshtml");
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ReliefRecord()
         {
-            List<Models.CarCodeReliefRecords> list = new List<Models.CarCodeReliefRecords>();
-            list.Add(new Models.CarCodeReliefRecords() { CarCode="浙A12345", InTime= DateTime.Now, RecordID=1, ChannelID =1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12346", InTime = DateTime.Now, RecordID = 2, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12347", InTime = DateTime.Now, RecordID = 3, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12348", InTime = DateTime.Now, RecordID = 4, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12349", InTime = DateTime.Now, RecordID = 5, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A123410", InTime = DateTime.Now, RecordID = 6, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12345", InTime = DateTime.Now, RecordID = 1, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12346", InTime = DateTime.Now, RecordID = 2, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12347", InTime = DateTime.Now, RecordID = 3, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12348", InTime = DateTime.Now, RecordID = 4, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12349", InTime = DateTime.Now, RecordID = 5, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A123410", InTime = DateTime.Now, RecordID = 6, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12345", InTime = DateTime.Now, RecordID = 1, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12346", InTime = DateTime.Now, RecordID = 2, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12347", InTime = DateTime.Now, RecordID = 3, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12348", InTime = DateTime.Now, RecordID = 4, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A12349", InTime = DateTime.Now, RecordID = 5, ChannelID = 1 });
-            list.Add(new Models.CarCodeReliefRecords() { CarCode = "浙A123410", InTime = DateTime.Now, RecordID = 6, ChannelID = 1 });
-            return View("~/Views/Manage/ReliefRecord.cshtml", list);
+            return View("~/Views/Manage/ReliefRecord.cshtml");
         }
-
-        //[HttpPost]
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ReliefManage()
+        {
+            return View("~/Views/Manage/ReliefManage.cshtml");
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public JsonResult Reliefs(Models.DataTableParameter parameter)//(string strname, int sEcho, int iDisplayStart, int iDisplayLength)
         {
             List<Models.CarCodeReliefRecords> list = new List<Models.CarCodeReliefRecords>();

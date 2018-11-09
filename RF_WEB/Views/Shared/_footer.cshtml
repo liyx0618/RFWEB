@@ -4,16 +4,3 @@
 <script type="text/javascript" src="~/Content/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="~/Content/h-ui.admin/js/H-ui.admin.js"></script>
 <!--/_footer 作为公共模版分离出去-->
-<script type="text/javascript">
-    $(function () {
-        $.ajax({
-            url: "/manage/menu",
-            type: "post",
-            dataType: "json",
-            success: function (data) {
-                //$("#menu-manage dd ul").empty();
-                //$("#menu-manage dd ul").append("<li><a data-href=\"/manage/index\" data-title=\"资讯管理\" href=\"javascript: void (0)\">" + $.parseJSON(data).codes + "</a></li>");
-            }
-        });
-    });
-</script>

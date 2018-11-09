@@ -18,5 +18,16 @@ namespace RF_WEB.Controllers
         {
             return View("~/Views/Manage/Index.cshtml");
         }
+
+        public JsonResult CheckLogin(string username, string password, string code)
+        {
+            return Json(new Utils.AjaxResult { state = Utils.ResultType.success.ToString(), message = "登录成功。" });
+            //return Content(json);
+        }
+
+        public ActionResult GetAuthCode()
+        {
+            return File(new Utils.VerifyCode().GetVerifyCode(), @"image/Gif");
+        }
     }
 }
