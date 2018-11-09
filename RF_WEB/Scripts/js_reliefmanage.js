@@ -22,7 +22,7 @@
                 },
                 "ordering": false,//全局禁用排序
                 "serverSide": true,
-                "sAjaxSource": "/Manage/Reliefs",//"@Url.Action('Reliefs','Manage')",
+                "sAjaxSource": "/Manage/ReliefList",//"@Url.Action('Reliefs','Manage')",
                 "fnServerData": function (sSource, aoData, fnCallback) {
                     aoData.push({ "name": "strname", "value": "11212" });
                     $.ajax({
@@ -34,15 +34,13 @@
                     });
                 },
                 "aoColumns": [
-                    { "mDataProp": "RecordID", "width": "50" },
-                    { "mDataProp": "CarCode", "width": "400" },
-                    { "mDataProp": "RecordID", "width": "200" },
-                    { "mDataProp": "CarCode", "width": "100" },
-                    { "mDataProp": "CarCode", "width": "100" },
-                    { "mDataProp": "RecordID", "width": "100" },
-                    { "mDataProp": "CarCode", "width": "100" },
-                    { "mDataProp": "RecordID", "width": "100" },
-                    { "mDataProp": "CarCode", "width": "100" }
+                    { "mDataProp": "CarCode", "width": "50" },
+                    { "mDataProp": "InTime", "width": "400" },
+                    { "mDataProp": "StartTime", "width": "200" },
+                    { "mDataProp": "EndTime", "width": "100" },
+                    { "mDataProp": "OperatorID", "width": "100" },
+                    { "mDataProp": "OperationDate", "width": "100" },
+                    { "mDataProp": "RecordID", "width": "100" }
                 ],
             });
         },

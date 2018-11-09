@@ -44,14 +44,14 @@ namespace RF_WEB.Models
         public DateTime? OperationDate
         {
             set; get;
-        }
+        } = DateTime.Now;
         /// <summary>
         /// 减免使用时间
         /// </summary>
         public DateTime? RelifeDate
         {
             set; get;
-        }
+        } = DateTime.Now;
         /// <summary>
         /// 收费员ID
         /// </summary>
@@ -73,7 +73,7 @@ namespace RF_WEB.Models
         public DateTime StartTime
         {
             set; get;
-        }
+        } = DateTime.Now;
 
         /// <summary>
         /// 有效结束时间
@@ -81,7 +81,7 @@ namespace RF_WEB.Models
         public DateTime EndTime
         {
             set; get;
-        }
+        } = DateTime.Now;
         /// <summary>
         /// 进场时间
         /// </summary>

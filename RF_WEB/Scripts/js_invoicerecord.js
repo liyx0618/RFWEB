@@ -1,8 +1,6 @@
 ﻿(function ($) {
-    $.relieflist = {
+    $.invoices = {
         initData: function () {
-            $startdt = $("#wdatemin");
-            $enddt = $("#wdatemax");
             var dutyTable = $(".table-sort").dataTable({
                 "destroy": true,       //销毁表格对象
                 "aLengthMenu": [5, 10],  //用户可自选每页展示数量 5条或10条
@@ -24,9 +22,9 @@
                 },
                 "ordering": false,//全局禁用排序
                 "serverSide": true,
-                "sAjaxSource": "/Manage/Reliefs",//"@Url.Action('Reliefs','Manage')",
+                "sAjaxSource": "/Manage/InvoiceList",//"@Url.Action('Reliefs','Manage')",
                 "fnServerData": function (sSource, aoData, fnCallback) {
-                    aoData.push({ "startdate": $startdt.val(), "enddate": $enddt.val() });
+                    aoData.push({ "name": "strname", "value": "11212" });
                     $.ajax({
                         "dataType": 'json',
                         "type": "POST",
@@ -42,30 +40,12 @@
                     { "mDataProp": "EndTime", "width": "100" },
                     { "mDataProp": "OperatorID", "width": "100" },
                     { "mDataProp": "OperationDate", "width": "100" },
-                    { "mDataProp": "ChargeUserID", "width": "100" },
-                    { "mDataProp": "RelifeDate", "width": "100" }
+                    { "mDataProp": "RecordID", "width": "100" }
                 ],
-                "oLanguage": { // 国际化配置
-                    "sProcessing": "正在获取数据，请稍后...",
-                    "sLengthMenu": "显示 _MENU_ 条",
-                    "sZeroRecords": "没有找到数据",
-                    "sInfo": "从 _START_ 到  _END_ 条记录 总记录数为 _TOTAL_ 条",
-                    "sInfoEmpty": "记录数为0",
-                    "sInfoFiltered": "(全部记录数 _MAX_ 条)",
-                    "sInfoPostFix": "",
-                    "sSearch": "查询",
-                    "sUrl": "",
-                    "oPaginate": {
-                        "sFirst": "第一页",
-                        "sPrevious": "上一页",
-                        "sNext": "下一页",
-                        "sLast": "最后一页"
-                    }
-                },
             });
         },
     };
     $(function () {
-        $.relieflist.initData();
+        $.invoices.initData();
     });
 })(jQuery);
